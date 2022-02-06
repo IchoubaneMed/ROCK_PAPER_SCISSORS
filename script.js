@@ -1,4 +1,4 @@
-const playerSelection = "rock";
+const playerSelection = prompt("type on of the following words Rock, Paper or Scissors :");
 const computerSelection = computerPlay();
 
 function computerPlay() {
@@ -6,4 +6,3 @@ function computerPlay() {
     return rps[Math.floor(Math.random()*rps.length)];
 }
 
-console.log(computerSelection);

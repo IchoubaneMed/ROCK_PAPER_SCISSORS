@@ -3,7 +3,8 @@ function playRound(playerSelection, computerSelection) {
    if (playerSelection2 === 'Rock' && computerSelection === 'Scissors' || 
         playerSelection2 === 'Paper' && computerSelection === 'Rock' || 
         playerSelection2 === 'Scissors' && computerSelection === 'Paper') {
-            console.log(`You win! ${playerSelection2} beats ${computerSelection}`); 
+            score += 1;
+            console.log(`You win! ${playerSelection2} beats ${computerSelection}`);
     } else if (playerSelection2 === 'Rock' && computerSelection === 'Rock' || 
                 playerSelection2 === 'Paper' && computerSelection === 'Paper' || 
                 playerSelection2 === 'Scissors' && computerSelection === 'Scissors') {
@@ -18,8 +19,20 @@ function computerPlay() {
 }
 
 
-const playerSelection = prompt("type on of the following words Rock, Paper or Scissors :").toLowerCase();
-const computerSelection = computerPlay();
+let score = 0
 
 
-console.log(playRound(playerSelection, computerSelection));
+function game() {
+    for (let i = 0; i < 5; i++) {
+        const playerSelection = prompt("type on of the following words Rock, Paper or Scissors :").toLowerCase();
+        const computerSelection = computerPlay();
+        playRound(playerSelection, computerSelection);
+    }
+    if (score > 3) {
+        console.log(`You win ! your score : ${score}`);
+    } else {
+        console.log(`You lose ! your score : ${score}`);
+    }
+}
+
+game();

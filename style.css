@@ -30,5 +30,142 @@ header {
     align-items: center;
 }
 
+/* Styling the main */
+
+main {
+    height: calc(100vh - 90px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content .robot {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.robot-choices {
+    display: flex;
+    margin: 30px 0;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.robot-choice {
+    border: 8px solid #b7b7c8ff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.active {
+    border: 8px solid #ffcc00ff;
+}
 
 
+hr {
+    border: 5px solid #b7b7c8ff;
+    width: 65%;
+}
+
+
+
+
+.content .player {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.player-choices {
+    display: flex;
+    margin: 30px 0;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.player-choice {
+    border: 8px solid #b7b7c8ff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+
+.player-choice:hover {
+    border: 8px solid #ffcc00ff;
+}
+
+.score {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.robot-score {
+    height: 40%;
+    color: #b7b7c8ff;
+}
+
+.comment {
+    height: 20%;
+    color: #b7b7c8ff;
+}
+
+.player-score {
+    height: 40%;
+    color: #b7b7c8ff;
+}
+
+.reload {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reload-btn {
+    display: none;
+    height: 100%;
+    width: 110px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 8px solid #b7b7c8ff;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+
+.reload-btn:hover {
+    border: 8px solid #ffcc00ff;
+}
+
+.reload-btn  img {
+    height: 80%;
+    width: 80px;
+}

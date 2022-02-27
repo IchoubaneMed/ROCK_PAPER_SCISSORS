@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>ROCK PAPER SCISSORS</title>
 </head>
 <body>
     <header>ROCK PAPER SCISSORS</header>
     <main>
         <div class="content">
+            <div class="reload">
+                <button class="reload-btn">
+                    <img src="images/reload.png" alt="reload">
+                </button>
+            </div>
             <!-- Robot -->
             <div class="robot">
                 <div class="robot-logo"><img src="images/robot.png" alt="robot-logo"></div>
@@ -22,19 +29,29 @@
                 <hr>
             </div>
             <!-- Score -->
-            <div class="score"></div>
+            <div class="score">
+                <div class="robot-score">
+                    <h1>Computer : 0</h1>
+                </div>
+                <div class="comment">
+                    <p>--</p>
+                </div>
+                <div class="player-score">
+                    <h1>Player : 0</h1>
+                </div>
+            </div>
             <!-- Player -->
             <div class="player">
                 <hr>
                 <div class="player-choices">
-                    <button class="choice" id="rock"><img src="images/rock.png" alt="rock"></button>
-                    <button class="choice" id="paper"><img src="images/paper.png" alt="paper"></button>
-                    <button class="choice" id="scissors"><img src="images/scissors.png" alt="scissors"></button>
+                    <button class="player-choice" id="rock-player"><img src="images/rock.png" alt="rock"></button>
+                    <button class="player-choice" id="paper-player"><img src="images/paper.png" alt="paper"></button>
+                    <button class="player-choice" id="scissors-player"><img src="images/scissors.png" alt="scissors"></button>
                 </div>
                 <div class="player-logo"><img src="images/player.png" alt="playes"></div>
             </div>
         </div>
     </main>
-    <script src="script.js"></script>
+    
 </body>
 </html>

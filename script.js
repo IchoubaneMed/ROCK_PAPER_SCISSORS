@@ -10,6 +10,10 @@ const comment = document.querySelector('.comment');
 const playerScore = document.querySelector('.player-score');
 const reloadButton = document.querySelector('.reload-btn');
 
+const modal = document.querySelector('.modal');
+const modalBody = document.querySelector('.modal-body')
+const tryBtn = document.querySelector('.try-btn');
+
 const scoreBoard = {
     player: 0,
     computer : 0
@@ -65,6 +69,19 @@ function game(playerChoice) {
     const computerSelection = computerPlay();
     console.log(playerSelection);
     playRound(playerSelection, computerSelection);
+    if (scoreBoard.player === 5) {
+        modalBody.innerHTML = `<p>Your Score : ${scoreBoard.player}</p><h1>You Win!</h1>`;
+        scoreBoard.player = 0;
+        scoreBoard.computer = 0;
+        modal.style.display = 'flex';
+    } else if (scoreBoard.computer === 5) {
+        modalBody.innerHTML = `<p>Your Score : ${scoreBoard.player}</p><h1>You Lose!</h1>`;
+        scoreBoard.player = 0;
+        scoreBoard.computer = 0;
+        modal.style.display = 'flex';
+    } else {
+        modal.style.display = 'none';
+    }
 }
 
 // Event listeners 
@@ -81,11 +98,16 @@ scissorsPlayer.addEventListener("click", function(){
     game("scissors");
 }); 
 
-reloadButton.addEventListener("click", function(){
+tryBtn.addEventListener("click", reload)
+
+reloadButton.addEventListener("click", reload);
+
+function reload() {
     scoreBoard.player = 0;
     scoreBoard.computer = 0;
     robotScore.innerHTML = '<h1>Computer : 0</h1>';
     playerScore.innerHTML = '<h1>Player : 0</h1>';
     comment.innerHTML = '<p>--</p>'
-    this.style.display = 'none'
-});
+    reloadButton.style.display = 'none'
+    modal.style.display = 'none'
+}

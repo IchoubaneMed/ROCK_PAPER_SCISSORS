@@ -1,3 +1,5 @@
+// Get elements from with DOM
+
 const rockPlayer = document.getElementById('rock-player');
 const paperPlayer = document.getElementById('paper-player');
 const scissorsPlayer = document.getElementById('scissors-player');
@@ -19,6 +21,7 @@ const scoreBoard = {
     computer : 0
 }
 
+// Round function
 
 function playRound(playerSelection, computerSelection) {
     let playerSelection2 = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
@@ -41,6 +44,10 @@ function playRound(playerSelection, computerSelection) {
     robotScore.innerHTML = `<h1>Computer : ${scoreBoard.computer}</h1>`;
     playerScore.innerHTML = `<h1>Player : ${scoreBoard.player}</h1>`;
 }
+
+
+// Computer's selection 
+
 function computerPlay() {
     const rps = ['Rock', 'Paper', 'Scissors'];
     const randi = rps[Math.floor(Math.random()*rps.length)];
